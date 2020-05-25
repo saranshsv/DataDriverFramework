@@ -6,8 +6,8 @@
 	<artifactId>DataDrivenFramework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -100,20 +100,38 @@
 			<artifactId>poi-ooxml-schemas</artifactId>
 			<version>4.1.2</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+
 	</dependencies>
 	<build>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.18.1</version>
-					<configuration>
-						<testFailureIgnore>false</testFailureIgnore>
-						<suiteXMLFiles>
-							<suiteXMLFile>src/test/resources/runner/testng.xml</suiteXMLFile>
-						</suiteXMLFiles>
-					</configuration>
-				</plugin>
-			</plugins>
+ 
+		<plugins>
+ 
+			<plugin>
+ 
+				<groupId>org.apache.maven.plugins</groupId>
+ 
+				<artifactId>maven-surefire-plugin</artifactId>
+ 
+				<version>3.0.0-M4</version>
+ 
+				<configuration>
+ 
+					<testFailureIgnore> false </testFailureIgnore>
+ 
+					<suiteXmlFiles>
+ 
+						<suiteXmlFile>src/test/resources/runner/testng.xml</suiteXmlFile>
+ 
+					</suiteXmlFiles>
+ 
+				</configuration>
+ 
+			</plugin>
+ 
+		</plugins>
+ 
+		
+ 
 	</build>
 </project>

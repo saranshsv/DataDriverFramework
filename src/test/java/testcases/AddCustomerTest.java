@@ -18,7 +18,7 @@ public class AddCustomerTest extends TestBase{
 		driver.findElement(By.cssSelector(OR.getProperty("firstName"))).sendKeys(firstName);
 		driver.findElement(By.cssSelector(OR.getProperty("lastName"))).sendKeys(lastName);
 		driver.findElement(By.cssSelector(OR.getProperty("postCode"))).sendKeys(postCode);
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		
 		driver.findElement(By.cssSelector(OR.getProperty("addBtn"))).click();
 		Alert alert=wait.until(ExpectedConditions.alertIsPresent());
